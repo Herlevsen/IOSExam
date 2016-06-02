@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15F34" minimumToolsVersion="Automatic">
+    <entity name="Continent" representedClassName=".Continent" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasCountry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="belongsTo" inverseEntity="Country" syncable="YES"/>
+    </entity>
+    <entity name="Country" representedClassName=".Country" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="belongsTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Continent" inverseName="hasCountry" inverseEntity="Continent" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName=".Person" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="Continent" positionX="-63" positionY="-9" width="128" height="75"/>
+        <element name="Country" positionX="-54" positionY="0" width="128" height="75"/>
+    </elements>
+</model>
